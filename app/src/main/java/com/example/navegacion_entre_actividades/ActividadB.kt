@@ -16,8 +16,11 @@ class ActividadB : AppCompatActivity() {
 
         //Configurando el Intent
         val mensajeC = intent.getStringExtra("MENSAJE")
+        val mensajeD = intent.getStringExtra("MENSAJE")
+
 
         Toast.makeText(this, mensajeC, Toast.LENGTH_SHORT).show()
+
 
 
         botonBC.setOnClickListener {
@@ -35,6 +38,8 @@ class ActividadB : AppCompatActivity() {
 
             var intent = Intent(this, ActividadD::class.java)
             intent.putExtra("MENSAJE", "Hacia Actividad D")
+            intent.putExtra("MENSAJEA", mensajeD)
+
             startActivity(intent)
         }
 
